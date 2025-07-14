@@ -177,5 +177,9 @@ def update_graphs(selected_genders, selected_ages, selected_addiction, selected_
     return fig1, fig2, fig3, fig4, fig5, fig6
 
 # Run the Dash server
+
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 8050))
+    app.run(host='0.0.0.0', port=port, debug=False)
+
